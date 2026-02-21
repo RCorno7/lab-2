@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="img/star.ico">
+  <link rel="stylesheet" href="css/style.css">
+  <title>IT&C 210 Home Page</title>
+</head>
+
+<body>
+  <header class="main-header">
+    <h1>IT&C 210 Lab</h1>
+  </header>
+
+  <span id="menu-toggle">&#9776;</span>
+
+  <div class="sidenav" id="main-nav">
+    <h1 id="menu">Menu</h1>
+    <hr>
+    <ul>
+      <li><a href="index.html"><b>[+]</b> Home</a></li>
+      <li><a href="about.html"><b>[+]</b> About</a></li>
+      <br>
+      <hr>
+      <br>
+      <li><a href="rb.html"><b>[+]</b> Rocket Boosters</a></li>
+      <li><a href="rockmiss.html"><b>[+]</b> Rockets & Missiles</a></li>
+      <li><a href="index.html"><b>[+]</b> Page5</a></li>
+      <li><a href="index.html"><b>[+]</b> Page6</a></li>
+    </ul>
+    <hr>
+    <p><b>[+]</b> This is some filler text.</p>
+    <p><b>[+]</b> Here is the assignment home page for the lab.</p>
+    <p><b>[!]</b> This website is still currently a work in progress, so things look ugly but trust the process.</p>
+    <br><br>
+    <img class="rocket" src="img/vostok.gif" alt="Vostock">
+  </div>
+
+  <br><br><br><br>
+  <div class="main-content" id="page-wrap">
+    <p id="intro">Welcome to the front page!</p>
+    <h3>Rocket Repo</h3>
+  <p>
+    The Rocket Repo is a repository which contains diagrams and figures of prominent spacecraft designs. 
+    The goal of this page is to provide some basic info about these crafts as well as 
+    how they work. Additionally, the site serves as a launch ground to test website design, security,  
+    and functionality.
+  </p>
+  <p>
+    While this project is specifically for IT&C 210 which looks at web systems and security, 
+    it has ben decided that the addition of rockets are nessasary because they are cool.
+  </p>
+  <p>
+    The Space Race has many ties to security. Whether it was the fear that the Space Shuttle 
+    might be used as a bomber or the constant exchange of intelligence between the world's superpowers,
+    this era has a lot we can learn from. Now the real question... Will anyone read this or am I just 
+    talking to myself? Who knows, maybe the professor or some internet stranger will find this page. In
+    the meantime i'll just work on bulding out this site.
+  </p>
+  <hr>
+  <p>
+    If you have any questions contact the site admin at [REDACTED]
+  </p>
+  <h4>Filler</h4>
+  <p>
+    Text
+  </p>
+
+    <h3>ToDo:</h3>
+    <label for="Sort-by-date" class="switch">
+      <input type="checkbox" id="Sort-by-date" onclick="sortDate()">
+      <span class="slider"></span>
+      <span class="switch-text">Sort by date</span>
+    </label>
+
+    <label for="Filter-completed-tasks" class="switch"> <!--Currently no functionality-->
+      <input type="checkbox" id="Filter-completed-tasks" onclick="sortTask()">
+      <span class="slider"></span>
+      <span class="switch-text">Filter completed tasks</span>
+    </label>
+
+    <div class="checkboxes">
+      <ul>
+        <!--Removed hardcoded ToDo values-->
+        <!--All tasks are now created with JS task-form-->
+      </ul>
+    </div>
+
+  <h4>Add Another Task:</h4>
+  <form id="task-form"> <!--Under progress-->
+  <label for="text">Name </label>
+  <input type="text" id="text" maxlength="25"><br><br>
+  <label for="date">Time </label>
+  <input type="date" id="date"><br><br>
+  <input type="submit" value="Create Task">
+  </form>
+
+  <h3>End Transmission</h3>
+
+</div>
+
+  <!-- Links to scripts -->
+<script src="js/script.js"></script>
+<script src="js/task-form.js"></script>
+</body>
+
+</html>

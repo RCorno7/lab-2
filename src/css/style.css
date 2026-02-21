@@ -1,0 +1,337 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+:root{
+    --primary: rgb(99, 93, 89);
+    --secondary: rgb(179, 161, 161);
+    --accent: rgb(245, 241, 237);
+    --black: rgb(27, 27, 26);
+}
+
+header{
+    position: fixed;
+    padding-left: 2%;
+    top: 0;
+    margin: 0;
+    width: 100%;
+    display: inline-block;
+    background: var(--primary);
+    color: var(--accent);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: 0 0 3px var(--black);
+    letter-spacing: 5px;
+    z-index: 9;
+    border-bottom: solid 5px;
+    border-color: var(--black);
+}
+
+#menu{
+    color: var(--accent);
+    letter-spacing: 7px;
+    text-align: center;
+}
+
+#intro{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 23px;
+}
+
+h3{
+    background: var(--primary);
+    border: 2px solid var(--primary);
+    color: var(--accent);
+    padding-left: 1%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+
+}
+h4{
+    background: var(--secondary);
+    border: 2px dotted var(--primary);
+    color: var(--accent);
+    padding-left: 1%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 18px;
+}
+
+.main-content p{
+  margin-left: 20px;
+  margin-right: 10px;
+}
+
+p{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 16px;
+}
+
+ul{
+    
+    list-style-type: none;
+    max-width: 100%;
+    padding: 3px;
+}
+
+li a{
+    font-size: 20px;
+    display:block;
+    color: var(--accent);
+    text-decoration: none;
+}
+
+li a:hover {
+  background-color: var(--primary);
+  color: var(--accent);
+  font-style: oblique;
+}
+
+hr{
+    height: 2px;
+    border: 0;
+    margin: 1px 0;
+    background-color: var(--primary);
+
+}
+
+button.material-icons{
+  line-height: 21px;
+  font-size: 17px;
+  float: right;
+  background: var(--accent);
+  color: var(--primary);
+  border: none;
+  border-left: 1px solid var(--black);
+}
+
+button.material-icons:hover {
+  background: var(--secondary);
+  color: var(--black);
+}
+
+.remove-btn {
+  background: none;
+  border-left: 1px solid var(--black);
+  cursor: pointer;
+  color: var(--primary); /* match your theme */
+  float: right;
+  padding: 0;
+  margin-left: 8px;
+}
+
+input[type="submit"] {
+  background-color: var(--accent);
+  color: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+input[type="submit"]:hover {
+  background-color: var(--secondary);
+  color: var(--black);
+}
+
+
+#page-wrap{
+    transition: margin-right .3s ease;
+}
+
+#page-wrap.shifted {
+  margin-right: 270px;
+  padding: 0 20px;
+}
+
+.sidenav {
+  height: 100%;
+  width: 250px; 
+  overflow: hidden;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  background: var(--secondary);
+  overflow-x: hidden;
+  border-left: none;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  transition: border-left .25s ease, transform .3s ease;
+  transform: translateX(100%);
+}
+
+.sidenav.open {
+  transform: translateX(0);
+  padding: 20px 1%;
+  border-left: solid 5px var(--black);   /* show border only when open */
+}
+
+#menu-toggle {
+  position: fixed;   /* fixed to viewport, not inside sidenav */
+  top: 20px;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  background: var(--primary);
+  color: var(--accent);
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 5px 0 0 5px;
+  transition: background 0.3s;
+  z-index: 20; /* above sidebar */
+}
+
+#menu-toggle:hover {
+  background: var(--black); /* hover feedback */
+}
+
+@media (max-width: 600px) {
+  .sidenav {
+    width: 100%;
+    height: 100%;
+    transform: translateX(100%);
+    right: 0;
+    border-left: none;
+    padding: 10%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
+
+.switch input {
+  display: none; /* Remove default style */
+}
+
+.switch-text{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-right: 20px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.slider {
+  position: relative;
+  width: 40px;
+  height: 20px;
+  background-color: var(--accent);
+  border: 1px solid var(--black);
+  border-radius: 20px;
+  transition: background-color 0.2s;
+}
+
+.slider::before {
+  content: ".";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  background: var(--primary);
+  border-radius: 50%;
+  transition: transform 0.2s;
+}
+
+.switch input:checked + .slider {
+  background-color: var(--secondary);
+}
+
+.switch input:checked + .slider::before {
+  transform: translateX(20px);
+}
+
+.checkboxes ul li{
+    font-size: 18px;
+    display: flex;
+    align-items: center; 
+    border: 1px solid var(--primary);
+    width: 65%;
+    max-width: 400px;
+    height: 23px;
+}
+
+input[type="checkbox"]:checked + label {
+  text-decoration: line-through;
+  font-style: italic;
+  color: var(--primary);
+}
+
+.right-align{
+  padding-left: 1%;
+  padding-right: 1%;
+ /* min-width: 25px;*/
+  text-align: right;
+}
+
+.checkboxes ul li label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.rocket {
+  display: flex;
+  position: absolute;
+  bottom: 50px;
+  right: 25%;
+  justify-content: center;
+  transition:transform 1s ease;
+}
+
+.shuttle {
+  display: flex;
+  position: absolute;
+  bottom: 25px;
+  justify-content: center;
+}
+
+.rocket:hover{
+    transform: scale(1.2);
+}
+.rocket.flyUp{
+    transform:scale(1) translateY(-300%);
+}
+
+#booster{
+  display: block;
+  margin: 0 auto;
+  filter: drop-shadow(1px 1px 1px var(--primary));
+}
+
+.shadow{
+  filter: drop-shadow(1px 1px 2px var(--primary));
+  display: inline-block; 
+  vertical-align: middle;
+}
+
+#engine1{
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; 
+  flex-wrap: wrap;
+  margin: 20px auto;
+  max-width: 100%; 
+}
+
+#duplicity{
+  width: 50vw;
+  max-width: 600px;
+  height: auto;
+  padding-right: 5%;
+  display: block;
+  margin: 0 auto;
+}
